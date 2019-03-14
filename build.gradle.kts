@@ -10,6 +10,7 @@ plugins {
 
 repositories {
     jcenter()
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
@@ -26,6 +27,10 @@ gradlePlugin {
             implementationClass = "org.sspiderd.testsplitter.TestSplitterPlugin"
         }
     }
+}
+
+test {
+    
 }
 
 pluginBundle {
