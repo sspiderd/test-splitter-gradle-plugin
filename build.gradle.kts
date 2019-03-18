@@ -10,7 +10,7 @@ plugins {
 
 repositories {
     jcenter()
-    maven { url "https://jitpack.io" }
+    maven { setUrl("https://jitpack.io") }
 }
 
 dependencies {
@@ -29,9 +29,10 @@ gradlePlugin {
     }
 }
 
-test {
-    
+tasks.withType<Test> {
+    maxParallelForks = Runtime.getRuntime().availableProcessors()
 }
+
 
 pluginBundle {
     website = "https://github.com/sspiderd/test-splitter-gradle-plugin.git"
