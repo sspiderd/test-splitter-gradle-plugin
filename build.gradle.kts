@@ -5,6 +5,7 @@ version = "0.1-SNAPSHOT"
 plugins {
     kotlin("jvm") version "1.3.21"
     `java-gradle-plugin`
+    maven
     id("com.gradle.plugin-publish") version "0.10.1"
 }
 
@@ -32,7 +33,6 @@ gradlePlugin {
 tasks.withType<Test> {
     maxParallelForks = Runtime.getRuntime().availableProcessors()
 }
-
 
 pluginBundle {
     website = "https://github.com/sspiderd/test-splitter-gradle-plugin.git"
